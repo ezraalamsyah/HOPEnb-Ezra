@@ -92,6 +92,30 @@ public class DonationDAO {
         return list;
     }
     
+    public static List<Donation> getReversedAllRecords() {
+        List<Donation> list = new ArrayList<Donation>();
+
+        try {
+            conn = new DBConnection().setConnection();
+            ps = conn.prepareStatement("select * from tbl_donasi ORDER BY idD DESC");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Donation u = new Donation();
+                u.setIdD(rs.getInt("idD"));
+                u.setNamaD(rs.getString("namaD"));
+                u.setEmailD(rs.getString("emailD"));
+                u.setJumlahD(rs.getInt("jumlahD"));
+                u.setMetodeD(rs.getString("metodeD"));
+                u.setPesanD(rs.getString("pesanD"));
+                list.add(u);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return list;
+    }
+    
+    
     public static Donation getRecordByIdD(int idD) {
         Donation u = null;
         try {

@@ -147,7 +147,7 @@
  <div class="site-section fund-raisers">
      
     <%
-        List<Donation> list = DonationDAO.getAllRecords();
+        List<Donation> list = DonationDAO.getReversedAllRecords();
         request.setAttribute("list", list);
     %>
     
