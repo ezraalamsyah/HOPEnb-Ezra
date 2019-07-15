@@ -18,6 +18,26 @@
 	<meta name="description" content="Build whatever layout you need with our Architect framework.">
 	<meta name="msapplication-tap-highlight" content="no">
 	<link href="css/main.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500|Gaegu:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/custom-style.css">
     <!--
     =========================================================
     * ArchitectUI HTML Theme Dashboard - v1.0.0
@@ -66,11 +86,11 @@
 
 <!-- img banner -->
 <div class="block-31 slider-item overlay" data-stellar-background-ratio="0.5"
-    style="background-image: url('images/bg06.jpg');">
+    style="background-image: url('images/sumbangan.jpg');max-height:550px;min-height: 0px;">
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-9 text-center col-sm-12 element-animate">
-          <h2 class="please">Help Children Give Them a Better Life</h2>
+          <h2 class="please" style="padding-bottom: 170px;">Donasi melalui HOPE</h2>
         </div>
       </div>
     </div>
