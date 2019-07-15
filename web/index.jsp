@@ -31,6 +31,9 @@
     <link rel="stylesheet" href="css/custom-style.css">
 </head>
 <body>
+    
+    <%@page import="Controller.DonationDAO,Model.Donation,java.util.*"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!-- main banner -->
 <!-- header -->
 <header>
@@ -142,6 +145,12 @@
 
 <!-- featured donate -->
  <div class="site-section fund-raisers">
+     
+    <%
+        List<Donation> list = DonationDAO.getAllRecords();
+        request.setAttribute("list", list);
+    %>
+    
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-12 text-center">
@@ -150,64 +159,23 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center bg-light pt-4">
-            <img src="<!--database-->" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2><!--database--></h2>
+          <c:forEach begin ="0" end="3" items="${list}" var="u">
+              <div class="col-md-6 col-lg-3 mb-5">
+                <div class="person-donate text-center bg-light pt-4">
+                    <img src="images/boy.png" alt="Image placeholder" class="img-fluid">
+                    <div class="donate-info">
+                        <h2>${u.getNamaD()}</h2>
+                        <span class="time d-block mb-3">${u.getPesanD()}</span>
 
-              <div class="donate-amount d-flex">
-                <div class="label">Donated</div>
-                <div class="amount"><!--database--></div>
-              </div>
-            </div>
-          </div>    
-        </div>
+                        <div class="donate-amount d-flex">
+                            <div class="label">Donated</div>
+                            <div class="amount">Rp ${u.getJumlahD()}</div>
+                        </div>
+                    </div>
+                </div>    
+               </div>
+          </c:forEach>
 
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center bg-light pt-4">
-            <img src="<!--database-->" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2><!--database--></h2>
-
-              <div class="donate-amount d-flex">
-                <div class="label">Donated</div>
-                <div class="amount"><!--database--></div>
-              </div>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center bg-light pt-4">
-            <img src="<!--database-->" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2><!--database--></h2>
-
-              <div class="donate-amount d-flex">
-                <div class="label">Donated</div>
-                <div class="amount"><!--database--></div>
-              </div>
-            </div>
-          </div>    
-        </div>
-
-        <div class="col-md-6 col-lg-3 mb-5">
-          <div class="person-donate text-center bg-light pt-4">
-            <img src="<!--database-->" alt="Image placeholder" class="img-fluid">
-            <div class="donate-info">
-              <h2><!--database--></h2>
-
-              <div class="donate-amount d-flex">
-                <div class="label">Donated</div>
-                <div class="amount"><!--database--></div>
-              </div>
-            </div>
-          </div>    
-        </div>
-      </div>
-    </div>
-  </div>
 <!-- //featured donate -->
 
 <!-- events -->
@@ -263,6 +231,10 @@
       </div>
     </div>
   </div>
+</div>
+
+<div>
+    
 </div>
 <!-- //events -->
 </body>
