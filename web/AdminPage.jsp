@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-    <%@page import="Controller.DonationDAO,Model.Donation,java.util.*"%>
+    <%@page import="Controller.DonationDAO,Model.Donation,Controller.ContactDAO,Model.Contact,Controller.EventsDAO,Model.Events,java.util.*"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
         
     <!-- table -->
@@ -22,7 +22,7 @@
                 <div class="nav">
                     <a data-toggle="tab" href="#tab-eg2-0" class="btn-pill btn-wide active btn btn-outline-alternate btn-sm">Events</a>
                     <a data-toggle="tab" href="#tab-eg2-1" class="btn-pill btn-wide mr-1 ml-1  btn btn-outline-alternate btn-sm">Donasi</a>
-                    <a data-toggle="tab" href="#tab-eg2-2" class="btn-pill btn-wide  btn btn-outline-alternate btn-sm">Tab 3</a>
+                    <a data-toggle="tab" href="#tab-eg2-2" class="btn-pill btn-wide  btn btn-outline-alternate btn-sm">Pesan</a>
                 </div>
             </div>
         </div>
@@ -32,7 +32,10 @@
                     <div class="main-card mb-3 card">
                         
                         <div class="card-body"><h5 class="card-title">Tabel Events</h5>
-                            
+                            <%
+                                List<Events> listEvents = EventsDAO.getAllRecordsE();
+                                request.setAttribute("list", listEvents);
+                            %>
                             <table class="mb-0 table">
                                 <thead>
                                     <tr>
@@ -45,7 +48,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- ganti for each -->
+                                    <c:forEach items="${listPesan}" var="v">
+                                        <tr>
+                                            <td>${v.getIdE()}</td>
+                                            <td>${v.getNamaE()}</td>
+                                            <td>${v.getImageE()}</td>
+                                            <td>${v.getAltE()}</td>
+                                            <td>${v.getLokasiE()}</td>
+                                            <td>${v.getCaptE()}</td>
+                                        </tr>
+                                    </c:forEach>
 
                                 </tbody>
                             </table>
@@ -88,21 +100,31 @@
                 </div>
                 <div class="tab-pane" id="tab-eg2-2" role="tabpanel">
                     <div class="main-card mb-3 card">
-                        <div class="card-body"><h5 class="card-title">Simple table</h5>
+                        <div class="card-body"><h5 class="card-title">Tabel Pesan</h5>
+                            <%
+                                List<Contact> listPesan = ContactDAO.getAllRecords();
+                                request.setAttribute("list", listPesan);
+                            %>
                             <table class="mb-0 table">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Foto</th>
-                                        <th>Image Alternate</th>
-                                        <th>Nama Events</th>
-                                        <th>Lokasi Events</th>
-                                        <th>Caption</th>
+                                        <th>Nama</th>
+                                        <th>Email</th>
+                                        <th>Subjek</th>
+                                        <th>Pesan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- ganti for each -->
-
+                                    <c:forEach items="${listPesan}" var="v">
+                                        <tr>
+                                            <td>${v.getIdC()}</td>
+                                            <td>${v.getNamaC()}</td>
+                                            <td>${v.getEmailC()}</td>
+                                            <td>${v.getSubjekC()}</td>
+                                            <td>${v.getPesanC()}</td>                                        
+                                        </tr>
+                                    </c:forEach>
                                 </tbody>
                             </table>
                         </div>

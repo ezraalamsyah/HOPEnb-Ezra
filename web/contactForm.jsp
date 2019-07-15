@@ -66,6 +66,7 @@
 
 
 	<h1 style="text-align: center;padding-top: 150px;">KONTAK KAMI</h1>
+        
 	<div class="site-section">
 		<div class="container">
 			<div class="row block-9">
