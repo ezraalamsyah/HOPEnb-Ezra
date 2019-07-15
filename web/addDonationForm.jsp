@@ -64,7 +64,7 @@
 
 						<!-- <div class="position-relative form-check"><input name="check" id="exampleCheck" type="checkbox" class="form-check-input"><label for="exampleCheck" class="form-check-label">Donasi Anonymous</label></div>-->
 
-						<button class="mt-2 btn btn-primary" type="submit">Sign in</button>
+						<button class="mt-2 btn btn-primary" type="submit">Donasi</button>
 					</form>
 				</div>
 			</div>

@@ -1,0 +1,25 @@
+.custom-overlay-color-1:before {
+	background: #79ccab;
+	border: solid;
+	border-top: 10px;
+	border-bottom: 10px;
+	border-color: white;
+
+}
+
+.custom-overlay-color-2:before {
+	background: cadetblue;
+	border: solid;
+	border-top: 10px;
+	border-bottom: 10px;
+	border-color: white;
+}
+
+.custom-overlay-color-3:before {
+	background: skyblue;
+	border: solid;
+	border-top: 10px;
+	border-bottom: 10px;
+	border-color: white;
+}
+

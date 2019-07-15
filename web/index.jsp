@@ -175,6 +175,9 @@
                 </div>    
                </div>
           </c:forEach>
+      </div>
+    </div>
+ </div>
 
 <!-- //featured donate -->
 
@@ -190,7 +193,7 @@
           <span class="featured-text d-block mb-3">Success Stories</span>
               <h2>Mari Bangun Sekolah</h2>
               <p class="mb-3">Kami butuh donasi untuk membangun sekolah di Papua</p>
-              <p><a href="donate.html" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
+              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
         </div>
       </div>
     </div>
@@ -208,7 +211,7 @@
           <span class="featured-text d-block mb-3">Success Stories</span>
               <h2>Mari Bangun Sekolah</h2>
               <p class="mb-3">Kami butuh donasi untuk membangun sekolah di Papua</p>
-              <p><a href="donate.html" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
+              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
         </div>
       </div>
     </div>
@@ -226,7 +229,7 @@
           <span class="featured-text d-block mb-3">Success Stories</span>
               <h2>Mari Bangun Sekolah</h2>
               <p class="mb-3">Kami butuh donasi untuk membangun sekolah di Papua</p>
-              <p><a href="donate.html" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
+              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
         </div>
       </div>
     </div>
