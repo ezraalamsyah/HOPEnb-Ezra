@@ -50,19 +50,19 @@
 	</nav>
 	<!-- END nav -->
 
-	<div class="block-31" style="position: relative;">
-		<div class="owl-carousel loop-block-31 ">
-			<div class="block-30 block-30-sm item" style="background-image: url('images/bg06.jpg');" data-stellar-background-ratio="0.5">
-				<div class="container">
-					<div class="row align-items-center justify-content-center">
-						<div class="col-md-7 text-center">
-							<h2 class="heading"></h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- img banner -->
+<div class="block-31 slider-item overlay" data-stellar-background-ratio="0.5"
+    style="background-image: url('images/bg06.jpg');">
+    <div class="container">
+      <div class="row slider-text align-items-center justify-content-center">
+        <div class="col-lg-9 text-center col-sm-12 element-animate">
+          <h2 class="please">Contact us for more information on how you can help!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //img banner -->
 
 
 	<h7>KONTAK KAMI</h7>
