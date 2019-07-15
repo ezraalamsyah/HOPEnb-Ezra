@@ -60,6 +60,8 @@
 
 <body>
 
+    <%@page import="Controller.EventsDAO,Model.Events,java.util.*"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<!-- header -->
 	<header>
 		<!-- nav -->
@@ -107,14 +109,19 @@
 
 	<!-- isi card -->
 	<div class="container">
+            <%
+                List<Events> list = EventsDAO.getAllRecordsE();
+                request.setAttribute("list", list);
+            %>
 		<div class="card-columns">
 
 			<!-- card -->
-			<div class="card">
-				<img class="card-img-top" src="<!--database-->">
+                        <c:forEach items="${list}" var="v">
+                            <div class="card">
+				<img class="card-img-top" src="${v.getImageE()}">
 				<div class="card-body">
-					<h5 class="card-title">Title goes here<!-- database --></h5>
-					<p>Caption goes here<!-- database --></p>
+					<h5 class="card-title">${v.getNamaE()}</h5>
+					<p>${v.getLokasiE()}</p>
 				</div>
 				<a href="#" class="btn more mt-3" data-toggle="modal" data-target="#exampleModal">Read More</a>
 				<!-- modal -->
@@ -122,20 +129,21 @@
 					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel1">Title goes here<!-- database --></h5>
+								<h5 class="modal-title" id="exampleModalLabel1">${v.getNamaE()}</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div class="modal-body">
-								<img class="card-img-top" src="images/1.jpg<!-- database -->" alt="<!-- database -->">
-								<p>Caption goes here</p>
+								<img class="card-img-top" src="${v.getImageE()}" alt="<!-- database -->">
+								<p>${v.getCaptE()}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- //modal -->
 			</div>
+                        </c:forEach>
 			<!-- //card -->			
 		</div>
 	</div>
