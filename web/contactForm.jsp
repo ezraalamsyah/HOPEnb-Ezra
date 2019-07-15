@@ -29,26 +29,35 @@
 </head>
 <body>
 
+	<!-- nav -->
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">HOPE</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="oi oi-menu"></span> Menu
-			</button>
 
+			<!-- logo -->
+			<div id="logo">
+				<a class="navbar-brand" href="index.jsp">HOPE</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        		<span class="oi oi-menu"></span>Menu
+          </button>
+			</div>	
+			<!-- //logo -->
+
+			<!-- list -->
 			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item"><a href="index.jsp" class="nav-link">Home</a></li>
-					<li class="nav-item"><a href="addDonataionForm.jsp" class="nav-link">Donate</a></li>
-					<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-					<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-					<li class="nav-item active"><a href="contactForm.jsp" class="nav-link">Contact</a></li>
-				</ul>
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a href="index.jsp" class="nav-link">Home</a></li>
+          	<li class="nav-item"><a href="addDonationForm.jsp" class="nav-link">Donate</a></li>
+          	<li class="nav-item"><a href="events.jsp" class="nav-link">Events</a></li>
+         		<li class="nav-item active"><a href="contactForm.jsp" class="nav-link">Contact Us</a></li>
+					</ul>
 			</div>
-		</div>
+			<!-- list -->
+
+		</div>	
 	</nav>
-	<!-- END nav -->
+	<!-- nav -->
+</header>
+<!-- header -->
 
 <!-- img banner -->
 <div class="block-31 slider-item overlay" data-stellar-background-ratio="0.5"
@@ -56,7 +65,7 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-9 text-center col-sm-12 element-animate">
-          <h2 class="please">Contact us for more information on how you can help!</h2>
+          <h2 class="please">Help Children Give Them a Better Life</h2>
         </div>
       </div>
     </div>
@@ -69,36 +78,31 @@
         
 	<div class="site-section">
 		<div class="container">
-			<div class="row block-9">
-				<div class="col-md-6 pr-md-5">
-					<form name="form-contact">
-						<div class="form-group">
-							<i class="icon-user"></i>
-							<input type="text" name="usernama" class="form-control px-3 py-3" placeholder="Your Name" required>
-						</div>
-					</form>
-					<form class="form-contact">
-						<div class="form-group">
-							<span class="icon-envelope-open"></span>
-							<input type="text" name="useremail" class="form-control px-3 py-3" placeholder="Your Email" required>
-						</div>
-					</form>
+			<form action="contact.jsp" method="post">
+	<div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel" style="padding: 120px;">
+		<div class="main-card mb-3 card">
+			<div class="card-body"><h5 class="card-title text-center">Donasi</h5>
+				<form class="">
+					
+					<div class="position-relative form-group"><label for="name" class="">Nama</label><input name="namaC" id="name" placeholder="Masukkan nama anda" type="text" class="form-control" required></div>
 
-					<div class="form-group">
-						<span class="icon-comments"></span>
-						<input type="text" class="form-control px-3 py-3" placeholder="Subject">
-					</div>
-					<div class="form-group">
-						<span class="icon-comment"></span>
-						<textarea cols="30" rows="7" class="form-control px-3 py-3" placeholder="Message" required></textarea>
-					</div>
-					<div class="form-group">
-						<button id="button-form" type="submit" class="btn btn-primary-form py-2 px-4" onclick="submit()">
-							<p>SUBMIT</p>
-						</div>
+                                        <div class="position-relative form-group"><label for="email" class="">Email</label><input name="emailC" id="email" placeholder="donatur@email.cool" type="email" class="form-control" required></div>
+
+					<div class="position-relative form-group"><label for="subjek" class="">Subjek</label><input name="subjekC" id="subjek" placeholder="Subjek pesan anda" type="text" class="form-control" required></div>
+                                        
+                                        <div class="position-relative form-group"><label for="exampleAddress" class="">Pesan</label><textarea cols="40" rows="5" name="pesanC" id="exampleAddress" placeholder="Pesan yang anda ingin share" class="form-control" required></textarea></div>
+                                        
+                                        
+
+						<!-- <div class="position-relative form-check"><input name="check" id="exampleCheck" type="checkbox" class="form-check-input"><label for="exampleCheck" class="form-check-label">Donasi Anonymous</label></div>-->
+
+					<button class="mt-2 btn btn-primary" type="submit">Hubungi Kami!</button>
 					</form>
 				</div>
 			</div>
+		</div>
+	</body>
+    </form>
 		</div>
 	</div>
 	<script>
@@ -115,6 +119,8 @@
 	</script>
 
 
+        <!-- Chatting funtion ...
+        
 	<button class="open-button" onclick="openForm()">Chatting</button>
 	<div class="chat-popup" id="Formulir1">
 		<form action="#contact" class="form01">
@@ -143,8 +149,9 @@
 			document.getElementById("Formulir1").style.display = "none";
 		}
 	</script>
-
-
+       
+        ... -->
+        
 	<!-- loader -->
 
 	<script src="js/bootstrap.js"></script>

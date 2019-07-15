@@ -34,6 +34,50 @@
 </head>
 
 <body>
+    <!-- nav -->
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+
+			<!-- logo -->
+			<div id="logo">
+				<a class="navbar-brand" href="index.jsp">HOPE</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        		<span class="oi oi-menu"></span>Menu
+          </button>
+			</div>	
+			<!-- //logo -->
+
+			<!-- list -->
+			<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a href="index.jsp" class="nav-link">Home</a></li>
+          	<li class="nav-item active"><a href="addDonationForm.jsp" class="nav-link">Donate</a></li>
+          	<li class="nav-item"><a href="events.jsp" class="nav-link">Events</a></li>
+         		<li class="nav-item"><a href="contactForm.jsp" class="nav-link">Contact Us</a></li>
+					</ul>
+			</div>
+			<!-- list -->
+
+		</div>	
+	</nav>
+	<!-- nav -->
+</header>
+<!-- header -->
+
+<!-- img banner -->
+<div class="block-31 slider-item overlay" data-stellar-background-ratio="0.5"
+    style="background-image: url('images/bg06.jpg');">
+    <div class="container">
+      <div class="row slider-text align-items-center justify-content-center">
+        <div class="col-lg-9 text-center col-sm-12 element-animate">
+          <h2 class="please">Help Children Give Them a Better Life</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //img banner -->
+
     <form action="addDonation.jsp" method="post">
 	<div class="tab-pane tabs-animation fade show active" id="tab-content-0" role="tabpanel" style="padding: 120px;">
 		<div class="main-card mb-3 card">

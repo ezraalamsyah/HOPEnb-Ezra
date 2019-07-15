@@ -33,9 +33,9 @@
                         
                         <div class="card-body"><h5 class="card-title">Tabel Events</h5>
                             <%
-                                List<Events> listEvents = EventsDAO.getAllRecordsE();
-                                request.setAttribute("list", listEvents);
-                            %>
+                            List<Events> listE = EventsDAO.getAllRecordsE();
+                            request.setAttribute("listE", listE);
+                        %>
                             <table class="mb-0 table">
                                 <thead>
                                     <tr>
@@ -48,17 +48,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach items="${listPesan}" var="v">
-                                        <tr>
-                                            <td>${v.getIdE()}</td>
-                                            <td>${v.getNamaE()}</td>
-                                            <td>${v.getImageE()}</td>
-                                            <td>${v.getAltE()}</td>
-                                            <td>${v.getLokasiE()}</td>
-                                            <td>${v.getCaptE()}</td>
-                                        </tr>
-                                    </c:forEach>
-
+                                    <c:forEach items="${listE}" var="v">
+                                    <tr>
+                                        <td>${v.getIdE()}</td>
+                                        <td>${v.getNamaE()}</td>
+                                        <td>${v.getImageE()}</td>
+                                        <td>${v.getAltE()}</td>
+                                        <td>${v.getLokasiE()}</td>
+                                        <td>${v.getCaptE()}</td>                                        
+                                    </tr>
+                                </c:forEach>
                                 </tbody>
                             </table>
                         </div>
@@ -102,8 +101,8 @@
                     <div class="main-card mb-3 card">
                         <div class="card-body"><h5 class="card-title">Tabel Pesan</h5>
                             <%
-                                List<Contact> listPesan = ContactDAO.getAllRecords();
-                                request.setAttribute("list", listPesan);
+                                List<Contact> listC = ContactDAO.getAllRecords();
+                                request.setAttribute("listC", listC);
                             %>
                             <table class="mb-0 table">
                                 <thead>
@@ -116,13 +115,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <c:forEach items="${listPesan}" var="v">
+                                    <c:forEach items="${listC}" var="y">
                                         <tr>
-                                            <td>${v.getIdC()}</td>
-                                            <td>${v.getNamaC()}</td>
-                                            <td>${v.getEmailC()}</td>
-                                            <td>${v.getSubjekC()}</td>
-                                            <td>${v.getPesanC()}</td>                                        
+                                            <td>${y.getIdC()}</td>
+                                            <td>${y.getNamaC()}</td>
+                                            <td>${y.getEmailC()}</td>
+                                            <td>${y.getSubjekC()}</td>
+                                            <td>${y.getPesanC()}</td>                                        
                                         </tr>
                                     </c:forEach>
                                 </tbody>

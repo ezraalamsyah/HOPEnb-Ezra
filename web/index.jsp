@@ -43,7 +43,7 @@
 
 			<!-- logo -->
 			<div id="logo">
-				<a class="navbar-brand" href="index.html">HOPE</a>
+				<a class="navbar-brand" href="index.jsp">HOPE</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         		<span class="oi oi-menu"></span>Menu
           </button>
@@ -53,11 +53,10 @@
 			<!-- list -->
 			<div class="collapse navbar-collapse" id="ftco-nav">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-          	<li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-          	<li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-          	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-         		<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+						<li class="nav-item active"><a href="index.jsp" class="nav-link">Home</a></li>
+          	<li class="nav-item"><a href="addDonationForm.jsp" class="nav-link">Donate</a></li>
+          	<li class="nav-item"><a href="events.jsp" class="nav-link">Events</a></li>
+         		<li class="nav-item"><a href="contactForm.jsp" class="nav-link">Contact Us</a></li>
 					</ul>
 			</div>
 			<!-- list -->
