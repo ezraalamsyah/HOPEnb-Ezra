@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Hope</title>
 	  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500|Gaegu:700" rel="stylesheet">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
