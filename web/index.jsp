@@ -191,63 +191,30 @@
 <!-- //featured donate -->
 
 <!-- events -->
-
-  <div class="featured-section overlay-color-2 custom-overlay-color-1" style="background-image: url('images/bg05.jpg');">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/bg05.jpg" alt="Donasi Bangun Sekolah" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-          <span class="featured-text d-block mb-3">Success Stories</span>
-              <h2>Mari Bangun Sekolah</h2>
-              <p class="mb-3">Kami butuh donasi untuk membangun sekolah di Papua</p>
-              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-<div>
-  <div class="featured-section overlay-color-2 custom-overlay-color-2" style="background-image: url('images/bg03.jpg');">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/bg03.jpg" alt="Donasi Bangun Sekolah" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-          <span class="featured-text d-block mb-3">Success Stories</span>
-              <h2>Mari Bangun Sekolah</h2>
-              <p class="mb-3">Kami butuh donasi untuk membangun sekolah di Papua</p>
-              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div class="featured-section overlay-color-2 custom-overlay-color-3" style="background-image: url('images/bg07.jpg');">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/bg07.jpg" alt="Donasi Bangun Sekolah" class="img-fluid">
-        </div>
-        <div class="col-md-6">
-          <span class="featured-text d-block mb-3">Success Stories</span>
-              <h2>Mari Bangun Sekolah</h2>
-              <p class="mb-3">Kami butuh donasi untuk membangun sekolah di Papua</p>
-              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div>
     
-</div>
+    <%
+        List<Events> listEvents = EventsDAO.getAllRecordsE();
+        request.setAttribute("listEvents", listEvents);
+    %>
+    
+  <c:forEach begin ="0" end="2" items="${listEvents}" var="x">  
+  <div class="featured-section overlay-color-2 custom-overlay-color-${x.getIdE()}" style="background-image: url('${x.getImageE()}');">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="${x.getImageE()}" alt="${x.getAltE()}" class="img-fluid" style="width: 535px;height: 315px;">
+        </div>
+        <div class="col-md-6" style="text-align: center;padding-left: 120px;">
+          <span class="featured-text d-block mb-3">Events Terkini</span>
+              <h2>${x.getNamaE()}</h2>
+              <p class="mb-3">${x.getCaptE()}</p>
+              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
+        </div>
+      </div>
+    </div>
+ </div>
+ </c:forEach>
+
 <!-- //events -->
 </body>
 </html>
