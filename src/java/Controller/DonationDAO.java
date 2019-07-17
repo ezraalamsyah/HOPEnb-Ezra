@@ -136,4 +136,18 @@ public class DonationDAO {
         }
         return u;
     }
+    
+    public static int getTotalDonations() {
+        int total = 0;
+        try {
+            conn = new DBConnection().setConnection();
+            ps = conn.prepareStatement("SELECT SUM(jumlahD) from tbl_donasi");
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            total = rs.getInt(1);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return total;
+    }
 }

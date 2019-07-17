@@ -32,7 +32,7 @@
 </head>
 <body>
     
-    <%@page import="Controller.DonationDAO,Model.Donation,java.util.*"%>
+    <%@page import="Controller.DonationDAO,Model.Donation,Controller.EventsDAO,Model.Events,java.util.*"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!-- main banner -->
 <!-- header -->
@@ -84,18 +84,28 @@
 <!-- main banner -->
 
 <!-- campaign jmlh donasi -->
-<div class="container">
-  <div class="row">
+<div class="container" style="background-color: #DAF7A6;margin-left: 0px;margin-right: 0px;max-width: none;margin-top: 50px;">
+  <div class="row" style="padding-top: 60px;padding-bottom: 60px;">
     <div class="col">
+        <%!
+            int totalEvents = EventsDAO.getTotalEvents();
+        %>
       <div class="card-body">
-        <h1>Total Events</h1>
-        <p><!--database--></p>
+        <h1 style="text-align: center;">Total Events</h1>
+        <h2 style="text-align: center;">        
+            <% out.println(totalEvents); %>
+        </h2>
       </div>
     </div>
     <div class="col">
+        <%!
+            int totalDonations = DonationDAO.getTotalDonations();
+        %>
       <div class="card-body">
-        <h1>Total Donasi</h1>
-        <p><!--database--></p>
+        <h1 style="text-align: center;">Total Donasi</h1>
+        <h2 style="text-align: center;">
+            Rp <% out.println(totalDonations); %>
+        </h2>
       </div>
     </div>
   </div>

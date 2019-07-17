@@ -112,4 +112,18 @@ public class EventsDAO {
         return v;
     }
     
+    public static int getTotalEvents() {
+        int total = 0;
+        try {
+            conn = new DBConnection().setConnection();
+            ps = conn.prepareStatement("SELECT COUNT(*) from tbl_events");
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            total = rs.getInt(1);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return total;
+    }
+    
 }
