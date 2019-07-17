@@ -4,10 +4,12 @@
  * and open the template in the editor.
  */
 package Controller;
+import static Controller.DonationDAO.conn;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import DB.DBConnection;
+import Model.Donation;
 
 import Model.Events;
 
@@ -74,6 +76,29 @@ public class EventsDAO {
         try {
             conn = new DBConnection().setConnection();
             ps = conn.prepareStatement("select * from tbl_events");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Events v = new Events();
+                v.setIdE(rs.getInt("idE"));
+                v.setNamaE(rs.getString("namaE"));
+                v.setImageE(rs.getString("imageE"));
+                v.setAltE(rs.getString("altE"));
+                v.setLokasiE(rs.getString("lokasiE"));
+                v.setCaptE(rs.getString("captE"));
+                listE.add(v);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return listE;
+    }
+    
+    public static List<Events> getReversedAllRecordsE() {
+        List<Events> listE = new ArrayList<Events>();
+
+        try {
+            conn = new DBConnection().setConnection();
+            ps = conn.prepareStatement("select * from tbl_events ORDER BY idE DESC");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Events v = new Events();

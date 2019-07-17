@@ -39,7 +39,6 @@
 	<!--// Nav Css -->
 	<!-- Fontawesome Css -->
 	<link href="css/fontawesome-all.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/custom-style.css">
 	<!--// Fontawesome Css -->
 	<!--// Style-sheets -->
 
@@ -110,30 +109,45 @@
 <!-- //img banner -->
 
 	<!-- isi card -->
-    <%
-        List<Events> listEvents = EventsDAO.getAllRecordsE();
-        request.setAttribute("listEvents", listEvents);
-    %>
-    
-  <c:forEach begin ="0" end="2" items="${listEvents}" var="x">  
-  <div class="featured-section overlay-color-2 custom-overlay-color-${x.getIdE()}" style="background-image: url('${x.getImageE()}');">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <img src="${x.getImageE()}" alt="${x.getAltE()}" class="img-fluid" style="width: 535px;height: 315px;">
-        </div>
-        <div class="col-md-6" style="text-align: center;padding-left: 120px;">
-          <span class="featured-text d-block mb-3">Events Terkini</span>
-              <h2>${x.getNamaE()}</h2>
-              <p class="mb-3">${x.getCaptE()}</p>
-              <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
-        </div>
-      </div>
-    </div>
- </div>
- </c:forEach>
+	<div class="container">
+            <%
+                List<Events> list = EventsDAO.getAllRecordsE();
+                request.setAttribute("list", list);
+            %>
+		<div class="card-columns">
 
-<!-- //events -->
+			<!-- card -->
+                        <c:forEach items="${list}" var="v">
+                            <div class="card">
+				<img class="card-img-top" src="${v.getImageE()}">
+				<div class="card-body">
+					<h5 class="card-title">${v.getNamaE()}</h5>
+					<p>${v.getLokasiE()}</p>
+				</div>
+				<a href="#" class="btn more mt-3" data-toggle="modal" data-target="#exampleModal${v.getIdE()}">Read More</a>
+				<!-- modal -->
+				<div class="modal fade" id="exampleModal${v.getIdE()}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel1">${v.getNamaE()}</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<img class="card-img-top" src="${v.getImageE()}" alt="<!-- database -->">
+								<p>${v.getCaptE()}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //modal -->
+			</div>
+                        </c:forEach>
+			<!-- //card -->			
+		</div>
+	</div>
 
 	<!-- Required common Js -->
 	<script src='js/jquery-2.2.3.min.js'></script>

@@ -193,12 +193,12 @@
 <!-- events -->
     
     <%
-        List<Events> listEvents = EventsDAO.getAllRecordsE();
+        List<Events> listEvents = EventsDAO.getReversedAllRecordsE();
         request.setAttribute("listEvents", listEvents);
     %>
     
   <c:forEach begin ="0" end="2" items="${listEvents}" var="x">  
-  <div class="featured-section overlay-color-2 custom-overlay-color-${x.getIdE()}" style="background-image: url('${x.getImageE()}');">
+  <div class="featured-section overlay-color-2 custom-overlay-color-${(x.getIdE()%3)+1}" style="background-image: url('${x.getImageE()}');">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
