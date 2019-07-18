@@ -173,8 +173,8 @@
                 <div class="person-donate text-center bg-light pt-4">
                     <img src="images/boy.png" alt="Image placeholder" class="img-fluid">
                     <div class="donate-info">
-                        <h2>${u.getNamaD()}</h2>
-                        <span class="time d-block mb-3">${u.getPesanD()}</span>
+                        <h2 style="height: 60px;">${u.getNamaD()}</h2>
+                        <span class="time d-block mb-3" style="height: 40px; max-height: 40px;">${u.getPesanD()}</span>
 
                         <div class="donate-amount d-flex">
                             <div class="label">Donated</div>
@@ -206,7 +206,7 @@
         </div>
         <div class="col-md-6" style="text-align: center;padding-left: 120px;">
           <span class="featured-text d-block mb-3">Events Terkini</span>
-              <h2>${x.getNamaE()}</h2>
+              <h2">${x.getNamaE()}</h2>
               <p class="mb-3">${x.getCaptE()}</p>
               <p><a href="addDonationForm.jsp" class="btn btn-success btn-hover-white py-3 px-5">Donasi Sekarang</a></p>
         </div>

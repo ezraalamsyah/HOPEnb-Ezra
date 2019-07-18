@@ -11,7 +11,7 @@ package Model;
  */
 public class Donation {
     private int idD, jumlahD;
-    private String namaD, emailD, metodeD, pesanD;
+    private String namaD, emailD, metodeD, pesanD, anonD;
 
     public int getIdD() {
         return idD;
@@ -59,5 +59,14 @@ public class Donation {
 
     public void setPesanD(String pesanD) {
         this.pesanD = pesanD;
-    } 
+    }
+    
+    public String getAnonD() {
+        return anonD;
+    }
+
+    public void setAnonD(String anonD) {
+        this.anonD = anonD;
+    }
+
 }

@@ -26,11 +26,22 @@ public class DonationDAO {
         try {
             conn = new DBConnection().setConnection();
             ps = conn.prepareStatement("insert into tbl_donasi(namaD,emailD,jumlahD,metodeD,pesanD) values(?,?,?,?,?)");
-            ps.setString(1, d.getNamaD());
-            ps.setString(2, d.getEmailD());
-            ps.setInt(3, d.getJumlahD());
-            ps.setString(4, d.getMetodeD());
-            ps.setString(5, d.getPesanD());
+            
+            if ("on".equals(d.getAnonD())){
+                ps.setString(1, "Hamba Allah (Anonymous)");
+                ps.setString(2, d.getEmailD());
+                ps.setInt(3, d.getJumlahD());
+                ps.setString(4, d.getMetodeD());
+                ps.setString(5, d.getPesanD());
+            }            
+            else {
+                ps.setString(1, d.getNamaD());
+                ps.setString(2, d.getEmailD());
+                ps.setInt(3, d.getJumlahD());
+                ps.setString(4, d.getMetodeD());
+                ps.setString(5, d.getPesanD());
+            }
+            
             status = ps.executeUpdate();
         } catch (Exception e) {
             System.out.println(e);
